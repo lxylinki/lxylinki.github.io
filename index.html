@@ -1,7 +1,224 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>My Webpage<h1>
-        <p>Just a test.</p>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Linki's kaleidoscope</title>
+<script type="text/JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d = document; 
+  if(d.images)
+  { 
+    if(!d.MM_p) 
+    {
+      d.MM_p=new Array();
+    }
+
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+
+    for(i=0; i<a.length; i++)
+    {
+      if (a[i].indexOf("#")!=0)
+        { 
+          d.MM_p[j] = new Image; 
+          d.MM_p[j++].src=a[i];
+        }
+    }
+  }
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  
+
+  if(!d) 
+  {
+    d=document; 
+  }
+
+  if( (p=n.indexOf("?"))>0 && parent.frames.length ) 
+  {
+    d=parent.frames[n.substring(p+1)].document; 
+    n=n.substring(0,p);
+  }
+
+  if(!(x=d[n]) && d.all) 
+  {
+    x=d.all[n]; 
+  }
+
+  for (i=0;!x&&i<d.forms.length;i++) 
+  {
+    x=d.forms[i][n];
+  }
+
+  for (i=0;!x&&d.layers&&i<d.layers.length;i++) 
+  {
+    x=MM_findObj(n,d.layers[i].document);
+  }
+
+  if(!x && d.getElementById) 
+  {
+    x=d.getElementById(n); 
+  }
+
+  return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+
+  if ( event == "init" && args.length > 2) 
+  {
+    if ( (img = MM_findObj(args[2])) != null && !img.MM_init) 
+    {
+      img.MM_init = true; 
+      img.MM_up = args[3]; 
+      img.MM_dn = img.src;
+
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+
+      nbArr[nbArr.length] = img;
+
+      for (i=4; i < args.length-1; i+=2) 
+      {
+        if ((img = MM_findObj(args[i])) != null) 
+        {
+          if (!img.MM_up) img.MM_up = img.src;
+          img.src = img.MM_dn = args[i+1];
+          nbArr[nbArr.length] = img;
+        }
+      } 
+    }
+  } else if (event == "over") 
+  {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) 
+    {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+
+  } else if (event == "out" ) 
+  {
+    for (i=0; i < document.MM_nbOver.length; i++) 
+    {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; 
+    }
+  } else if (event == "down") 
+  {
+    nbArr = document[grpName];
+    if (nbArr)
+    {
+      for (i=0; i < nbArr.length; i++) 
+        { 
+          img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; 
+        }
+    }
+
+    document[grpName] = nbArr = new Array();
+
+    for (i=2; i < args.length-1; i+=2) 
+    {
+      if ((img = MM_findObj(args[i])) != null) 
+      {
+        {
+          if (!img.MM_up) img.MM_up = img.src;
+          img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+          nbArr[nbArr.length] = img;
+        } 
+      }
+    }
+  }
+}
+
+function MM_controlSound(x, _sndObj, sndFile) { //v3.0
+  var i, method = "", sndObj = eval(_sndObj);
+
+  if (sndObj != null) 
+  {
+    if (navigator.appName == 'Netscape') 
+    {
+      method = "play";
+    } else {
+
+      if (window.MM_WMP == null) 
+      {
+        window.MM_WMP = false;
+
+        for(i in sndObj) if (i == "ActiveMovie") 
+        {
+          window.MM_WMP = true; break;
+        } 
+      }
+
+      if (window.MM_WMP) method = "play";
+      else if (sndObj.FileName) method = "run";
+    } 
+  }
+
+  if (method) eval(_sndObj+"."+method+"()");
+  else window.location = sndFile;
+}
+//-->
+
+</script>
+<style type="text/css">
+<!--
+.STYLE2 {
+    font-size: 45px; 
+    color: #000000; 
+    //font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: "Kunstler Script";
+}
+
+body {
+	background-color: #000000;
+	background-image: url(pic/bg_graystar.gif);
+}
+
+.STYLE26 {
+	color: #000000;
+	font-family: "Kunstler Script";
+	font-size: 18px;
+}
+-->
+</style>
+
+</head>
+<body onload="MM_preloadImages('pic/cup.jpg','pic/flower.jpg','pic/cloud.jpg','pic/city.jpg')">
+<p align="left" class="STYLE2">This is Linki's kaleidoscope</p>
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+  <tr>
+      <td bgcolor="#999999"><a><img src="pic/logo2.jpg" name="Logo" width="149" height="69" border="0" style="background-color: #CCCC99" /></a>
+    </td>
+    <td align="right" bgcolor="#999999"><p><span><a href="blog.html" class="STYLE26">Blog</a></span><span class="STYLE26"><span class="STYLE26">&#149;<a href="work.html" class="STYLE26">Projects</a></span></span></p>
+<p><span><a href="graph.html" class="STYLE26">Design</a></span><span class="STYLE26"><span class="STYLE26">&#149;<a href="photo.html" class="STYLE26">Photography</a></span></span></p>
+    </td>
+</table>
+
+<div align="center">
+   <table width="771" height="638" border="0" cellpadding="0" cellspacing="0">
+     <tr>
+      <td width="349" height="332"><a href="blog.html" target="_top" onclick="MM_nbGroup('down','group1','cup','pic/cup.jpg',1)" onmouseover="MM_nbGroup('over','cup','pic/cup.jpg','pic/cup.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="pic/cup'.jpg" alt="" name="cup" width="350" height="231" border="0" align="middle" id="cup" onload="" /></a></td>
+
+      <td width="72">&nbsp;</td>
+
+      <td width="350"><a href="work.html" target="_top" onclick="MM_nbGroup('down','group1','cloud','pic/cloud.jpg',1)" onmouseover="MM_nbGroup('over','cloud','pic/cloud.jpg','pic/cloud.jpg',1)" onmouseout="MM_nbGroup('out')"></a><a href="work.html" target="_top" onclick="MM_nbGroup('down','group1','cloud','pic/cloud.jpg',1)" onmouseover="MM_nbGroup('over','cloud','pic/cloud.jpg','pic/cloud.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="pic/cloud'.jpg" alt="" name="cloud" width="350" height="232" border="0" align="middle" onload="" /></a></td>
+    </tr>
+    <tr>
+      <td height="70"><a href="graph.html" target="_top" onclick="MM_nbGroup('down','group1','city','pic/city.jpg',1)" onmouseover="MM_nbGroup('over','city','pic/city.jpg','pic/city.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="pic/city'.jpg" alt="" name="city" width="350" height="232" border="0" onload="" /></a></td>
+
+      <td>&nbsp;</td>
+  
+      <td><a href="photo.html" target="_top" onclick="MM_nbGroup('down','group1','flower','pic/flower.jpg',1)" onmouseover="MM_nbGroup('over','flower','pic/flower.jpg','pic/flower.jpg',1)" onmouseout="MM_nbGroup('out')"><img src="pic/flower'.jpg" alt="" name="flower" width="350" height="230" border="0" onload="" /></a></td>
+    </tr>
+  </table>
+
+  <p onfocus="MM_controlSound('play','document.CS1239113496750','audio/music.mp3')">
+    <embed name='CS1239113496750' src='audio/music.mp3' loop=true autostart=true mastersound hidden=true width=0 height=0></embed>
+  </p>
+
+</div>
 </body>
 </html>

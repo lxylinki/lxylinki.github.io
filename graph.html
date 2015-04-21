@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Linki's kaleidoscope</title>
+<style type="text/css">
+<!--
+body {
+	background-image: url(pic/bg_graystar.gif);
+}
+
+.STYLE3 {
+	font-size: 18px;
+    color: #000000;
+	font-family: "Kunstler Script";
+}
+-->
+</style>
+
+<script type="text/JavaScript">
+<!--
+function MM_controlSound(x, _sndObj, sndFile) { //v3.0
+  var i, method = "", sndObj = eval(_sndObj);
+  if (sndObj != null) {
+    if (navigator.appName == 'Netscape') method = "play";
+    else {
+      if (window.MM_WMP == null) {
+        window.MM_WMP = false;
+        for(i in sndObj) if (i == "ActiveMovie") {
+          window.MM_WMP = true; break;
+        } 
+      }
+      if (window.MM_WMP) method = "play";
+      else if (sndObj.FileName) method = "run";
+  } }
+  if (method) eval(_sndObj+"."+method+"()");
+  else window.location = sndFile;
+}
+
+function updateImgs() {
+    //var imgs = document.getElementById("paintings");
+    //var urls = updateImgs.arguments;
+
+    //for (i=0; i<urls.length; i++)
+    //{
+    //    document.write("<p>" + urls[i] + "</p>");
+    //}
+    var abs_path = document.location.pathname;
+    document.write("<p>" + web_path + "</p>");
+}
+
+//-->
+</script>
+
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="4">
+  <tr>
+      <td bgcolor=""><p onfocus="MM_controlSound('play','document.CS1239113782390','audio/music.mp3')"><a href="index.html"><span class="STYLE3"><img src="pic/logo2.jpg" width="149" height="69" /></span></a></p></td>
+    <td align="right" bgcolor="" class="STYLE3"><span><a href="blog.html" class="STYLE3">Blog</a> &#149;<a href="photo.html" class="STYLE3">Photography</a></span></td>
+  </tr>
+</table>
+
+<img id="paintings" src="graph/a.jpg" onclick="updateImgs('graph/a.jpg','graph/b.jpg','graph/c.jpg')"></img>
+
+<p class="STYLE3" align="center">My gallary of painting and design. All rights reserved.</p>
+
+<embed name='CS1239113782390' src='audio/14.You.mp3' loop=true autostart=true mastersound hidden=true width=0 height=0></embed>
+
+</body>
+</html>
