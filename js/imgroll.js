@@ -1,4 +1,6 @@
 window.onload = rollinit;
+// prevent cache
+window.onunload = function(){};
 
 function rollinit() {
     for (var i=0; i<document.images.length; i++) {
