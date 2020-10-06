@@ -2,7 +2,7 @@ window.onload = setBrowseFuncs;
 
 var photos = new Array(
         "pic/album1/img1.jpg",
-        "pic/album1/img2.jpg",
+        "pic/album1/img0.jpg",
         "pic/album1/img3.jpg",
         "pic/album1/img4.jpg",
         "pic/album1/img5.jpg",
